@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<!--Navigation bar-->
+  <%=link_to "Home", welcome_home_path %> 
+  <%=link_to "About Us", welcome_about_path %>
+  <%=link_to "Projects", welcome_projects_path %>
+  
+ <!--Navigation bar-->
 <%= yield %>
 
 </body>
+  
+   <p> <sup>Status Report webApp desgined for HP GFIT by Andres M</sup></p> 
 </html>
