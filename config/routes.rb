@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :projects
+
   get 'welcome/home'
 
   get 'welcome/projects'
