@@ -7,15 +7,37 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  
+  <div class="container">
+  
 <!--Navigation bar-->
   <%=link_to "Home", welcome_home_path %> 
   <%=link_to "About Us", welcome_about_path %>
   <%=link_to "Projects", projects_path %>
   
  <!--Navigation bar-->
+  
+    <% if flash[:notice] %>
+    <div class="alert alert-success">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:notice] %>
+    </div>
+    <% elsif flash[:error]%>
+    <div class="alert alert-error">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:error] %>
+    </div>
+    <% elsif flash[:alert]%>
+    <div class="alert">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <%= flash[:alert] %>
+    </div>
+    <% end %>
+  
 <%= yield %>
-
+ 
 </body>
   
    <p> <sup>Status Report webApp desgined for HP GFIT by Andres M</sup></p> 
 </html>
+</div>
