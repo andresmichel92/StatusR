@@ -16,12 +16,13 @@ ActiveRecord::Schema.define(version: 20150401171217) do
   create_table "projects", force: true do |t|
     t.string   "name"
     t.string   "status"
-    t.integer   "number"
-    t.string   "manager"
-    t.date      "start"
-    t.date      "end"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "number"
+    t.string   "manager"
+    t.string   "staffing"
+    t.date     "start"
+    t.date     "end"
   end
 
 end
